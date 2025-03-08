@@ -1,0 +1,33 @@
+{
+  "name": "poised_32cherry_32_40tappy_32plane_41",
+  "displayName": "Poised Cherry (Tappy plane)",
+  "version": "1.0.0",
+  "description": "Poised Cherry (Tappy plane)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "",
+  "devDependencies": {
+    "cordova-android": "^13.0.0",
+    "cordova-plugin-inappbrowser": "^6.0.0",
+    "cordova-plugin-ionic-webview": "5.0.1",
+    "cordova-plugin-safariviewcontroller": "^2.0.0",
+    "cordova-plugin-screen-orientation": "3.0.2",
+    "es6-promise-plugin": "^4.2.2"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-screen-orientation": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-safariviewcontroller": {},
+      "cordova-plugin-ionic-webview": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}

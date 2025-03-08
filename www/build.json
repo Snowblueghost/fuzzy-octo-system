@@ -1,0 +1,6 @@
+{
+  "android": {
+    "gradleVersion": "8.7",
+    "gradleDistributionUrl": "file:///C:/gradle/gradle-8.7-bin.zip"
+  }
+}
