@@ -24,17 +24,10 @@ jobs:
           cd $HOME/android-sdk
           wget https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip
           unzip -q commandlinetools-linux-*.zip
-          ls -la  # Debug: List extracted files
-          rm -rf cmdline-tools
-          # Handle new directory structure
-          if [ -d "cmdline-tools" ]; then
-            mv cmdline-tools latest-temp
-            mkdir -p cmdline-tools
-            mv latest-temp cmdline-tools/latest
-          else
-            mkdir -p cmdline-tools/latest
-            mv tools/* cmdline-tools/latest/
-          fi
+          ls -la  # Debug extracted files
+          # Handle new SDK structure (no "tools" directory)
+          mkdir -p cmdline-tools/latest
+          mv cmdline-tools/* cmdline-tools/latest/ || true  # Ignore errors
           echo "$HOME/android-sdk/cmdline-tools/latest" >> $GITHUB_PATH
 
       - name: Install Android Packages
