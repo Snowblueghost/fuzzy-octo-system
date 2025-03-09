@@ -26,13 +26,8 @@ jobs:
           unzip -q commandlinetools-linux-*.zip
           ls -la  # Debug: List extracted files
           rm -rf cmdline-tools
-          mkdir -p cmdline-tools/latest
-          # Move extracted files to the correct location
-          if [ -d "cmdline-tools" ]; then
-            mv cmdline-tools/* cmdline-tools/latest/
-          else
-            mv tools/* cmdline-tools/latest/
-          fi
+          mkdir -p cmdline-tools
+          mv tools cmdline-tools/latest
           echo "$HOME/android-sdk/cmdline-tools/latest" >> $GITHUB_PATH
 
       - name: Install Android Packages
